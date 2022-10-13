@@ -30,3 +30,5 @@ override.tf.json
 
 # Ignore this file from your Mac 
 .DS_store
+
+.terraform.lock.hcl
