@@ -1,5 +1,5 @@
-# Ring Nnumber Challenge Team # 1
-From Cloudreach/Talent-Academy/All-Exercises [Ring-Challenge]https://github.com/cloudreach/ta-all-exercises/tree/master/challenges/other/ring-challenge
+# Ring Number Challenge Team # 1
+From Cloudreach/Talent-Academy/All-Exercises [Ring-Challenge](https://github.com/cloudreach/ta-all-exercises/tree/master/challenges/other/ring-challenge)
 
 ## Overview
 As a team, you should coordinate to deploy a server in each of your individual accounts. Each server will contain a file at your own defined location. The file need to contain a number. Every 10 seconds(or 1 minute if you are using cron), the servers will increment the value of the file and pass it along to the next one.
