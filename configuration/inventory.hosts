@@ -1,0 +1,27 @@
+[servers_jemila]
+18.197.69.76
+
+[servers_julio]
+35.156.198.133
+
+[servers_leticia]
+3.125.4.130
+
+[servers_muhammet]
+3.75.146.124
+
+[servers_rima]
+3.122.204.192
+
+[servers:children]
+servers_jemila
+servers_leticia
+servers_muhammet
+servers_rima
+servers_julio
+
+# PRIVATE KEY
+# Username - ubuntu
+[servers:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/ring-challenge-team-1

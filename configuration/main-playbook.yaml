@@ -1,0 +1,12 @@
+---
+- hosts: servers
+  become: yes
+  tasks:
+    - name: Update the apt-get of the machine
+      apt:
+        update_cache: yes
+
+    - name: Copy test.txt file to the each server
+      copy:
+        src: "test/test.txt"
+        dest: "/home/ubuntu/"
