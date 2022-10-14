@@ -4,6 +4,7 @@ resource "aws_instance" "tf_ring_instance" {
   ami                    = data.aws_ami.tf_data_ami_ubuntu.id
   vpc_security_group_ids = [aws_security_group.tf_ring_servers_sg.id]
   key_name               = var.keypair
+ # user_name              = "${file("user-data.sh")}"
   tags = {
     Name = "tf-ring-instance"
     Project = "ring-number-challenge-team-1"
