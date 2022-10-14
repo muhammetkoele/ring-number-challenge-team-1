@@ -6,7 +6,7 @@
       apt:
         update_cache: yes
 
-    - name: Copy test.txt file to the each server
+    - name: Copy private key from local machine to the each server
       copy:
-        src: "test/test.txt"
-        dest: "/home/ubuntu/"
+        src: "~/.ssh/ring-challenge-team-1"
+        dest: "/home/ubuntu/.ssh/"
