@@ -20,8 +20,6 @@ servers_muhammet
 servers_rima
 servers_julio
 
-# PRIVATE KEY
-# Username - ubuntu
 [servers:vars]
 ansible_user=ubuntu
 ansible_ssh_private_key_file=~/.ssh/ring-challenge-team-1
