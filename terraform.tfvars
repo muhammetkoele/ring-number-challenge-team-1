@@ -6,3 +6,7 @@ vpc_name         = "ta-vpc"
 keypair       = "ring-challenge-team-1"
 public_subnet_a  = "public-1"
 private_subnet_a = "private-1"
+github_branch_name = "jemila"
+github_user_name = "jemiladaud"
+github_user_email = "<jemila.daud@cloudreach.com>"
+

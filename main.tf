@@ -27,3 +27,11 @@ data "aws_subnet" "privat_a" {
     values = [var.private_subnet_a]
   }
 }
+
+data "aws_secretsmanager_secret" "tf_ring_number_challenge_github_access_token" {
+    name = "ring-number-challenge-github-access-token"
+}
+
+data "aws_secretsmanager_secret_version" "tf_ring_number_challenge_github_access_token_secret_version" {
+    secret_id = data.aws_secretsmanager_secret.tf_ring_number_challenge_github_access_token.id
+}
