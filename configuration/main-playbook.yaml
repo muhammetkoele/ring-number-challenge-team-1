@@ -10,3 +10,21 @@
       copy:
         src: "~/.ssh/ring-challenge-team-1"
         dest: "/home/ubuntu/.ssh/"
+
+- hosts: servers_leticia
+  become: yes
+  tasks:
+    - name: Copy local script to first server
+      copy:
+        src: "./test/script.sh"
+        dest: "/home/ubuntu/"
+        mode: 0777 
+
+    - name: Run script on the first server
+      shell: (cd /home/ubuntu; sh script.sh)
+      register: output        
+    
+    - name: Run a command using a templated variable (always use quote filter to avoid injection)
+      ansible.builtin.debug: 
+        msg: "first server, count: {{ output.stdout }}"
+

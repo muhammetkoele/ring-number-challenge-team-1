@@ -5,7 +5,7 @@
 35.156.198.133
 
 [servers_leticia]
-3.125.4.130
+3.121.109.56
 
 [servers_muhammet]
 3.75.146.124
@@ -14,11 +14,7 @@
 3.122.204.192
 
 [servers:children]
-servers_jemila
 servers_leticia
-servers_muhammet
-servers_rima
-servers_julio
 
 [servers:vars]
 ansible_user=ubuntu
