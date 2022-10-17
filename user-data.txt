@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# sudo apt-get update -y
+# sudo apt-get install apache2 -y
+
+# cat <<EOF > /var/www/html/index.html
+# <html>
+# <title> Ring Number ${Team1}</title>
+# <body style="background-color:${color};">
+#     <h1> This is the ${Team1} !! </h1>
+#     <h2> Ring Number : {number} </h2>
+#     #<h2> Ring Number : {{number} number + 1 } </h2>
+
+# </body>
+# </html>
+# EOF
+
+# sudo service apache2 restart
+
+# echo server_julio 1         
+# sleep 3
+# echo server_leti 2
+# sleep 3
+# echo3 server_rima 3
+# sleep 3
+# echo server_jemi 2
+# sleep 3
+# echo3 server_mohamet 3
+# sleep 3
+
+

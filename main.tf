@@ -1,4 +1,4 @@
-data "aws_ami" "tf_data_ami_ubuntu" {
+data "aws_ami" "ubuntu_image" {
   owners = [var.owner_id] 
   most_recent = true
   filter {
@@ -14,14 +14,14 @@ data "aws_vpc" "tf_data_vpc" {
   }
 }
 
-data "aws_subnet" "tf_data_subnet" {
+data "aws_subnet" "public_a" {
   filter {
     name   = "tag:Name"
     values = [var.public_subnet_a]
   }
 }
 
-data "aws_subnet" "tf_data_subnet1_private" {
+data "aws_subnet" "privat_a" {
   filter {
     name   = "tag:Name"
     values = [var.private_subnet_a]
