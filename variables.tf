@@ -30,4 +30,12 @@ variable "private_subnet_a" {
   description = "The Subnet Name of the AZ A"
 }
 
+variable "github_branch_name" {
+  description = "Branch name to pull from when instance is created"
+}
 
+variable "github_user_name" {
+}
+
+variable "github_user_email" {
+}
