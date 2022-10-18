@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# sudo apt-get update -y
+# sudo apt-get apache -y
+
+# cat <<EOF > /var/www/html/index.html
+# <html>
+# <title> Ring Number Team1</title>
+# <body style="background-color:${color};">
+#     <h1> This is ${server_name} 's Server !! </h1>
+#     <h2> Received Number : {number} </h2>
+#     <h2> Number to be sent : {{number} number + 1 } </h2>
+
+# </body>
+# </html>
+# EOF
+
+# sudo service apache2 restart
+
+
+
