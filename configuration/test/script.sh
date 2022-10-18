@@ -14,7 +14,7 @@ if [ -e $NUMBER_FILE_NAME ] && [ -e $IP_ADDRESS_FILE_NAME ]
         echo "sending number: " $value
         echo $value > $NUMBER_FILE_NAME
         scp -o StrictHostKeyChecking=no -i ~/.ssh/ring-challenge-team-1 $NUMBER_FILE_NAME ubuntu@$next_ip_address:/home/ubuntu/
-      #  rm $NUMBER_FILE_NAME
+        rm $NUMBER_FILE_NAME
     else
         echo "File not found"
 fi
