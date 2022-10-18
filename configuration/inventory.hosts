@@ -1,20 +1,27 @@
 [servers_jemila]
-18.197.69.76
+3.64.251.63
 
 [servers_julio]
-35.156.198.133
+3.70.176.98
 
 [servers_leticia]
-3.121.109.56
+3.127.139.6
 
 [servers_muhammet]
-3.75.146.124
+18.194.133.138
 
 [servers_rima]
-3.122.204.192
+18.185.149.44
+
+[servers_test]
+52.59.249.134
 
 [servers:children]
+servers_jemila
+servers_julio
 servers_leticia
+servers_muhammet
+servers_rima
 
 [servers:vars]
 ansible_user=ubuntu
