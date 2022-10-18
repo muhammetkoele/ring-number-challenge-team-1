@@ -48,12 +48,6 @@
 - hosts: servers_leticia
   become: yes
   tasks:
-    - name: Copy txt file to first server
-      copy:
-        src: "./test/number.txt"
-        dest: "/home/ubuntu/"
-        mode: 0777
-
     - name: Git checkout
       git:
         repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
@@ -61,16 +55,6 @@
         version: muhammet
         single_branch: yes
         update: yes
-    
-    - name: Run script on the the third server
-      shell: (cd /home/ubuntu; sh script.sh)
-      become: yes
-      become_user: ubuntu
-      register: output 
-    
-    - name: Run a command using a templated variable (always use quote filter to avoid injection)
-      ansible.builtin.debug: 
-        msg: "third server, count: {{ output.stdout }}"
   
 - hosts: servers_muhammet
   become: yes
@@ -93,3 +77,16 @@
         version: jemila
         single_branch: yes
         update: yes
+
+- hosts: servers
+  become: yes
+  tasks:
+    - name: Run CRON job to run script at every minute. 
+      cron: 
+        name: “run script"
+        user: "ubuntu"
+        weekday: "*"
+        minute: "*"
+        hour: "*"
+        job: "sh /home/ubuntu/script.sh"
+        state: present
