@@ -1,8 +1,7 @@
 terraform {
-    backend "s3" {
-        bucket          = "ta-terraform-tfstates-439272626435"
-        key             = "sprint1/week6/day4/training-terraform/terraform.tfstate"
-        region          = "eu-central-1"
-        dynamodb_table  = "terraform-lock"
-    }
+  backend "s3" {
+    bucket = "talent-academy-labs-terraform-tfstates-342055123193"
+    key    = "week6/ring-number-challenge/terraform.tfstates"
+    dynamodb_table = "terraform-lock"
+  }
 }
