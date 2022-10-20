@@ -41,6 +41,6 @@ servers_rima
 
 [servers:vars]
 ansible_user=ubuntu
-ansible_ssh_private_key_file=~/.ssh/ring-challenge-team-1' "$ip1" "$ip2" "$ip3" "$ip4" "$ip5"> ~//src/talent-academy/challenge_labs/ring-number-challenge-team-1/configuration/inventory.hosts
+ansible_ssh_private_key_file=~/.ssh/ring-challenge-team-1' "$ip1" "$ip2" "$ip3" "$ip4" "$ip5"> ~/src/talent-academy/challenge_labs/ring-number-challenge-team-1/configuration/inventory.hosts
 cd configuration/
 ansible-playbook main-playbook.yaml
