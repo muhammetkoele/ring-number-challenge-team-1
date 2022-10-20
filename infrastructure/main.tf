@@ -5,6 +5,10 @@ data "aws_ami" "ubuntu_image" {
     name = "name"
     values = [var.ami_name]
   }
+  filter {
+    name = "architecture"
+    values = ["x86_64"]
+  }
 }
 
 data "aws_vpc" "tf_data_vpc" {
