@@ -20,8 +20,17 @@ For example:
 
 ## Group 1:
 
-- Muhammet Köle-------->[Muhammet-github-profile](https://github.com/muhammetkoele)
-- Jemila Daud---------->[Jemila-github-profile](https://github.com/Jemiyin)
-- Julio Arana---------->[Julio--github-profile](https://github.com/julioaranajr)  
-- Leticia Valladares--->[Leticia-github-profile](https://github.com/leticiavalladares)
-- Rima Alhamwi--------->[Rima-github-profile](https://github.com/Rimahamwi)
+- Muhammet Köle
+  [Muhammet-github-profile](https://github.com/muhammetkoele)
+  
+- Jemila Daud
+  [Jemila-github-profile](https://github.com/Jemiyin)
+  
+- Julio Arana
+  [Julio--github-profile](https://github.com/julioaranajr) 
+  
+- Leticia Valladares
+  [Leticia-github-profile](https://github.com/leticiavalladares)
+  
+- Rima Alhamwi
+  [Rima-github-profile](https://github.com/Rimahamwi)
