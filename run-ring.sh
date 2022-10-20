@@ -21,20 +21,26 @@ git checkout jemila
 
 printf '[servers_jemila]
 %s
+
 [servers_julio]
 %s
+
 [servers_leticia] 
 %s
+
 [servers_muhammet]
 %s
+
 [servers_rima]
 %s
+
 [servers:children]
 servers_jemila
 servers_julio
 servers_leticia
 servers_muhammet
 servers_rima
+
 [servers:vars]
 ansible_user=ubuntu
 ansible_ssh_private_key_file=~/.ssh/ring-challenge-team-1' "$ip1" "$ip2" "$ip3" "$ip4" "$ip5"> ~/src/Talent-Academy/ring-number-challenge-team-1/configuration/inventory.hosts
