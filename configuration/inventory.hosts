@@ -1,13 +1,13 @@
 [servers_jemila]
 18.193.70.252
 [servers_julio]
-18.193.70.252
+3.127.222.134
 [servers_leticia] 
-18.193.70.252
+3.70.220.99
 [servers_muhammet]
-18.193.70.252
+18.195.79.228
 [servers_rima]
-18.193.70.252
+18.185.5.184
 [servers:children]
 servers_jemila
 servers_julio
