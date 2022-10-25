@@ -1,0 +1,24 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install git
+
+# define variables
+BRANCH_NAME="${branch-name-placeholder}"
+
+# git configuration
+sudo git config --system user.email "${github-user-email-placeholder}"
+sudo git config --system user.name "${github-user-name-placeholder}"
+
+# clone application
+cd /home/ubuntu/
+git clone --branch $BRANCH_NAME https://github.com/muhammetkoele/ring-number-challenge-team-1.git 
+
+cd ./ring-number-challenge-team-1
+
+# find out instance's ip address
+curl https://checkip.amazonaws.com > instance-ip.txt
+
+# commit and push instance's ip address
+git add .
+git commit -m "Update instance's ip address"
+git push https://${github-access-token-placeholder}@github.com/muhammetkoele/ring-number-challenge-team-1.git $BRANCH_NAME 
