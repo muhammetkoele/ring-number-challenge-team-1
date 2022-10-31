@@ -1,0 +1,92 @@
+---
+- hosts: servers
+  become: yes
+  tasks:
+    - name: Update the apt-get of the machine
+      apt:
+        update_cache: yes
+
+    - name: Copy private key from local machine to the each server
+      copy:
+        src: "~/.ssh/ring-challenge-team-1"
+        dest: "/home/ubuntu/.ssh/"
+
+    - name: Copy script to each server server
+      copy:
+        src: "./test/script.sh"
+        dest: "/home/ubuntu/"
+        mode: 0777
+
+- hosts: servers_jemila
+  become: yes
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
+        dest: /home/ubuntu/repobranch
+        version: julioaranajr
+        single_branch: yes
+        update: yes
+
+    - name: Copy txt file to first server
+      copy:
+        src: "./test/number.txt"
+        dest: "/home/ubuntu/"
+        mode: 0777
+
+- hosts: servers_julio
+  become: yes
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
+        dest: /home/ubuntu/repobranch
+        version: leticia
+        single_branch: yes
+        update: yes
+
+- hosts: servers_leticia
+  become: yes
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
+        dest: /home/ubuntu/repobranch
+        version: muhammet
+        single_branch: yes
+        update: yes
+  
+- hosts: servers_muhammet
+  become: yes
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
+        dest: /home/ubuntu/repobranch
+        version: rima
+        single_branch: yes
+        update: yes
+
+- hosts: servers_rima
+  become: yes
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/muhammetkoele/ring-number-challenge-team-1.git'
+        dest: /home/ubuntu/repobranch
+        version: jemila
+        single_branch: yes
+        update: yes
+
+- hosts: servers
+  become: yes
+  tasks:
+    - name: Run CRON job to run script at every minute. 
+      cron: 
+        name: “run script"
+        user: "ubuntu"
+        weekday: "*"
+        minute: "*"
+        hour: "*"
+        job: "sh /home/ubuntu/script.sh"
+        state: present
